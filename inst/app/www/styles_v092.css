@@ -1,0 +1,386 @@
+/* V0.9.2 — proportional horizontal cards */
+.rsl3-home{max-width:1560px;margin:0 auto;padding:1.6rem 1.15rem 2rem}
+.rsl3-hero-row{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;margin-bottom:14px}
+.rsl3-hero,.rsl3-logo-panel,.rsl3-card,.rsl3-dataset,.rsl3-quick{background:#fff;border:1px solid #dfe8f2;border-radius:16px;box-shadow:none}
+.rsl3-hero{min-height:220px;padding:1.4rem 1.55rem;background:#f2f7fd}
+.rsl3-ready{display:inline-flex;align-items:center;gap:.38rem;padding:.34rem .68rem;margin-bottom:.85rem;border:1px solid #d7e3f1;border-radius:999px;background:#fff;color:#355a86;font-size:.72rem;font-weight:720}
+.rsl3-hero h1{margin:0 0 .5rem;font-size:2.25rem;font-weight:820;letter-spacing:-.03em;color:#173764}
+.rsl3-hero p{max-width:780px;margin:0;color:#556d8a;font-size:.95rem;line-height:1.58}
+.rsl3-actions{display:flex;gap:.65rem;margin-top:1.2rem}
+.rsl3-primary,.rsl3-secondary{min-height:40px;padding:.55rem .92rem!important;border-radius:9px!important;font-size:.8rem!important;font-weight:730!important}
+.rsl3-primary{color:#fff!important;background:#1670ee!important;border-color:#1670ee!important}.rsl3-secondary{color:#1662c8!important;background:#fff!important;border:1px solid #2874df!important}
+.rsl3-logo-panel{min-height:220px;display:grid;place-items:center;background:#f4f9fe}.rsl3-mark{width:120px;height:90px;position:relative}.rsl3-mark-bars{position:absolute;left:34px;top:8px;width:54px;height:52px;display:flex;gap:5px;align-items:flex-end}.rsl3-mark-bars span{width:9px;border-radius:2px 2px 0 0}.rsl3-mark-bars .rb1{height:24px;background:#2472d9}.rsl3-mark-bars .rb2{height:34px;background:#18a260}.rsl3-mark-bars .rb3{height:43px;background:#f0b62e}.rsl3-mark-bars .rb4{height:53px;background:#de493d}.rsl3-mark-book{position:absolute;left:16px;right:16px;bottom:11px;height:38px;border-bottom:7px solid #173f78;border-left:7px solid #173f78;border-right:7px solid #173f78;border-radius:0 0 18px 18px}
+.rsl3-grid{display:grid;gap:14px;margin-bottom:14px}.rsl3-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.rsl3-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rsl3-card{display:grid!important;grid-template-columns:52px minmax(0,1fr) 30px!important;gap:14px!important;align-items:center!important;min-height:118px!important;padding:1rem 1rem!important;text-align:left!important;color:inherit!important;text-decoration:none!important;width:100%!important;overflow:hidden!important}
+.rsl3-card:hover{background:#fbfdff!important;border-color:#cbdbea!important;color:inherit!important}
+.rsl3-icon{width:48px;height:48px;border-radius:11px;display:grid;place-items:center;font-size:1.12rem;align-self:start}.rsl3-icon.blue{color:#1870e9;background:#e8f2ff}.rsl3-icon.green{color:#0c9952;background:#e5f7ed}.rsl3-icon.red{color:#e44c43;background:#ffebe8}.rsl3-icon.purple{color:#7446dd;background:#f0e9ff}.rsl3-icon.amber{color:#d18b00;background:#fff2cf}.rsl3-icon.cyan{color:#138f98;background:#e1f7f7}.rsl3-icon.slate{color:#566d8b;background:#ebf0f6}
+.rsl3-copy{min-width:0;width:100%;align-self:start}.rsl3-copy h3{margin:.08rem 0 .36rem!important;color:#17375f!important;font-size:1.06rem!important;font-weight:800!important;line-height:1.25!important;letter-spacing:-.01em!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important}.rsl3-copy p{margin:0!important;color:#60738b!important;font-size:.84rem!important;line-height:1.52!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;max-width:none!important;width:100%!important}
+.rsl3-arrow{width:30px;height:30px;border:1px solid #dae6f1;border-radius:50%;display:grid;place-items:center;color:#1670e8;background:#fff;align-self:center;justify-self:end;font-size:.72rem}
+.rsl3-bottom{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr);gap:14px}.rsl3-dataset,.rsl3-quick{min-height:108px;padding:1rem}.rsl3-dataset{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}.rsl3-dataset-icon{width:38px;height:38px;border-radius:8px;display:grid;place-items:center;color:#119653;background:#e5f7ed}.rsl3-dataset h3,.rsl3-quick h3{margin:0 0 .45rem;color:#18375f;font-size:.88rem;font-weight:760}.rsl3-dataset-name{color:#173a67;font-size:.78rem;font-weight:720;word-break:break-word}.rsl3-dataset-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.35rem;color:#74859b;font-size:.7rem}.rsl3-no-data{color:#7e8da2;font-size:.75rem}.rsl3-quick-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.rsl3-qstep{display:grid;grid-template-columns:30px 1fr;gap:.55rem;align-items:center}.rsl3-qnum{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:#1670ee;color:#fff;font-size:.73rem;font-weight:800}.rsl3-qstep strong{display:block;color:#17375f;font-size:.72rem}.rsl3-qstep span{display:block;color:#8a98aa;font-size:.64rem;margin-top:1px}
+@media(max-width:1180px){.rsl3-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.rsl3-hero-row{grid-template-columns:1fr}.rsl3-bottom{grid-template-columns:1fr}}
+@media(max-width:720px){.rsl3-grid-4,.rsl3-grid-3,.rsl3-quick-row{grid-template-columns:1fr}.rsl3-card{grid-template-columns:46px minmax(0,1fr) 28px!important}.rsl3-icon{width:44px;height:44px}}
+
+
+/* V0.9.9 — dynamic SEM/CFA syntax examples */
+.sem-syntax-example {
+  margin-bottom: .9rem;
+  padding: .8rem .9rem;
+  border: 1px solid #dbe7f3;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.sem-syntax-example-head {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  margin-bottom: .55rem;
+}
+
+.sem-syntax-example-head strong,
+.sem-syntax-example > strong {
+  color: #173b68;
+  font-size: .82rem;
+}
+
+.sem-syntax-example-head span {
+  color: #7689a1;
+  font-size: .7rem;
+}
+
+.sem-syntax-example pre {
+  max-height: 180px;
+  margin: .4rem 0 .55rem !important;
+  padding: .65rem .75rem;
+  overflow: auto;
+  border: 1px solid #e0e8f1;
+  border-radius: 8px;
+  background: #ffffff !important;
+  color: #28476d !important;
+  font-size: .73rem !important;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.sem-syntax-example.compact pre {
+  max-height: 130px;
+}
+
+.sem-syntax-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sem-example-note {
+  margin-top: .55rem;
+  color: #71839a;
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
+
+/* V1.0.1 — stable SEM/CFA result tables */
+.table {
+  width: 100% !important;
+}
+
+.table th {
+  color: #173b68 !important;
+  background: #f5f8fc !important;
+  font-size: .76rem !important;
+  font-weight: 800 !important;
+  white-space: nowrap;
+}
+
+.table td {
+  color: #354f70 !important;
+  font-size: .75rem !important;
+  vertical-align: middle !important;
+}
+
+.table-responsive,
+.tab-pane {
+  overflow-x: auto;
+}
+
+
+/* ==========================================================
+   V1.0.2 — GLOBAL ANALYSIS PROCESS OVERLAY
+   ========================================================== */
+.analysis-busy-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(245, 249, 253, .82);
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.analysis-busy-overlay[style*="display: block"],
+.analysis-busy-overlay[style*="display:block"] {
+  display: flex !important;
+}
+
+.analysis-busy-card {
+  width: min(430px, calc(100vw - 36px));
+  padding: 1.65rem 1.5rem 1.4rem;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #dce7f2;
+  border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(19, 53, 91, .14);
+}
+
+.analysis-busy-card h4 {
+  margin: .85rem 0 .4rem;
+  color: #173b68;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.analysis-busy-card p {
+  margin: 0 auto;
+  max-width: 350px;
+  color: #536b88;
+  font-size: .83rem;
+  line-height: 1.55;
+}
+
+.analysis-busy-sub {
+  margin-top: .7rem;
+  color: #8a99ad;
+  font-size: .7rem;
+}
+
+.analysis-spinner {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto;
+  border: 4px solid #dce9f8;
+  border-top-color: #1670ee;
+  border-radius: 50%;
+  animation: ara-spin .8s linear infinite;
+}
+
+@keyframes ara-spin {
+  to { transform: rotate(360deg); }
+}
+
+.analysis-button-disabled {
+  opacity: .62 !important;
+  cursor: wait !important;
+}
+
+/* SEM/CFA manual result tables */
+.sem-result-wrap {
+  padding: .85rem 1rem 1rem;
+  overflow-x: auto;
+}
+
+.sem-result-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .76rem;
+}
+
+.sem-result-table thead th {
+  padding: .62rem .65rem;
+  text-align: left;
+  color: #173b68;
+  font-weight: 800;
+  white-space: nowrap;
+  background: #f4f8fc;
+  border-top: 1px solid #dde7f1;
+  border-bottom: 1px solid #d5e0eb;
+}
+
+.sem-result-table thead th:first-child {
+  border-left: 1px solid #dde7f1;
+  border-radius: 8px 0 0 0;
+}
+
+.sem-result-table thead th:last-child {
+  border-right: 1px solid #dde7f1;
+  border-radius: 0 8px 0 0;
+}
+
+.sem-result-table tbody td {
+  padding: .58rem .65rem;
+  color: #38516f;
+  border-bottom: 1px solid #edf1f5;
+  background: #ffffff;
+  vertical-align: top;
+}
+
+.sem-result-table tbody tr:hover td {
+  background: #fbfdff;
+}
+
+.sem-empty-state {
+  margin: 1rem;
+  padding: 1rem;
+  color: #667b96;
+  background: #f8fbfe;
+  border: 1px solid #e0e8f1;
+  border-radius: 10px;
+  font-size: .8rem;
+}
+
+
+/* V1.0.3 — SEM/CFA diagram controls */
+.diagram-control-box {
+  margin: .8rem 0;
+  padding: .75rem .8rem .25rem;
+  border: 1px solid #dde6ef;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.diagram-control-box > strong {
+  display: block;
+  margin-bottom: .45rem;
+  color: #1f354f;
+  font-size: .78rem;
+}
+
+.diagram-control-box .form-group {
+  margin-bottom: .55rem !important;
+}
+
+.diagram-control-box label {
+  color: #53677f;
+  font-size: .72rem;
+  font-weight: 650;
+}
+
+
+/* V1.0.4 — performance UX */
+.fast-analysis-note {
+  margin: .55rem 0 .65rem;
+  padding: .55rem .65rem;
+  border-radius: 8px;
+  background: #f5f8fc;
+  border: 1px solid #e0e8f1;
+  color: #6b7e96;
+  font-size: .69rem;
+  line-height: 1.45;
+}
+
+
+/* V1.0.5 — background analysis: never block navigation */
+#analysis-busy-overlay,
+.analysis-busy-overlay {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+
+.diagram-control-note {
+  margin: .35rem 0 .6rem;
+  font-size: .76rem;
+  line-height: 1.45;
+  color: #64748B;
+}
+
+
+.global-analysis-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-right: .35rem;
+  padding: .38rem .62rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #ffffff;
+  font-size: .72rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.global-analysis-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FBBF24;
+  box-shadow: 0 0 0 3px rgba(251,191,36,.18);
+  animation: analysis-pulse 1.15s ease-in-out infinite alternate;
+}
+
+@keyframes analysis-pulse {
+  from { opacity: .55; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 1100px) {
+  .global-analysis-text {
+    display: none;
+  }
+}
+
+
+/* V1.0.15 — HLM incremental table UX */
+.fast-analysis-note + .btn,
+.sem-example-note + .btn {
+  margin-top: .5rem;
+}
+
+
+/* V1.0.16 — IPD plot controls */
+.plot-control-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: .75rem;
+  padding: .8rem 1rem .15rem;
+}
+
+.plot-control-strip .form-group {
+  margin-bottom: .35rem !important;
+}
+
+.plot-control-strip label {
+  font-size: .75rem;
+  color: #53677f;
+  font-weight: 650;
+}
+
+
+/* v1.0.04: HLM sensitivity data tables must occupy separate layout rows.
+   Limit the styling to sensitivity components; other analysis tabs are untouched. */
+.hlm-sensitivity-results { display: flex; flex-direction: column; gap: 1rem; min-width: 0; width: 100%; margin-top: 1rem; }
+.hlm-sensitivity-note { width: 100%; min-width: 0; }
+.hlm-sensitivity-note pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+.hlm-sensitivity-panel { display: block; position: relative; width: 100%; min-width: 0; clear: both; padding: 1rem; border: 1px solid #dde6ef; border-radius: 12px; background: #fff; }
+.hlm-sensitivity-panel h5 { margin: 0 0 .65rem; font-weight: 750; color: #1d3b61; }
+.hlm-sensitivity-panel .text-muted { margin-bottom: .65rem; }
+.hlm-sensitivity-table-scroll { display: block; position: relative; min-width: 0; width: 100%; overflow-x: auto; overflow-y: visible; clear: both; }
+.hlm-sensitivity-table-scroll .dataTables_wrapper { width: 100%; max-width: 100%; position: relative; clear: both; }
+.hlm-sensitivity-table-scroll .dataTables_scroll { width: 100%; }
+.hlm-sensitivity-table-scroll .dataTables_scrollBody { overflow-x: auto !important; }
+.hlm-sensitivity-table-scroll .dataTable { width: 100% !important; }
+.hlm-sensitivity-status-panel { overflow-x: auto; }
+.hlm-sensitivity-status-panel table { width: 100%; table-layout: auto; border-collapse: collapse; margin-bottom: 0; }
+.hlm-sensitivity-status-panel td, .hlm-sensitivity-status-panel th { white-space: normal !important; overflow-wrap: anywhere; vertical-align: top; padding: .6rem .7rem; }
+
+/* v1.2.9 — Keseragaman lebar dan tinggi tabel hasil seluruh modul */
+.ara-result-stack { display: flex; flex-direction: column; gap: .85rem; width: 100%; min-width: 0; }
+.ara-result-section { border: 1px solid #dbe5ef; border-radius: 12px; background: #fff; width: 100%; min-width: 0; overflow: hidden; }
+.ara-result-section > summary { display: list-item; cursor: pointer; padding: .8rem 1rem; font-weight: 700; color: #183e67; background: #f6f9fd; }
+.ara-result-section > .ara-result-block { padding: .65rem .85rem .85rem; }
+.ara-result-block { min-width: 0; max-width: 100%; }
+.ara-table-scroll { width: 100%; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.ara-result-table { width: 100%; min-width: max-content; margin-bottom: 0; border-collapse: collapse; }
+.ara-result-table th { white-space: nowrap; vertical-align: bottom; padding: .55rem .65rem; }
+.ara-result-table td { white-space: nowrap; vertical-align: top; padding: .5rem .65rem; font-variant-numeric: tabular-nums; }
+.ara-result-empty, .ara-table-note { padding: .6rem .2rem; font-size: .85rem; color: #5b7088; }
+/* Setiap hasil DT tetap berada di dalam panelnya, tanpa meluber ke panel lain */
+.tab-pane, .tab-content, .bslib-card, .card-body, .accordion-body { min-width: 0; max-width: 100%; }
+.tab-pane .dataTables_wrapper, .accordion-body .dataTables_wrapper { max-width: 100%; min-width: 0; clear: both; }
+.tab-pane .dataTables_scroll, .accordion-body .dataTables_scroll { max-width: 100%; }
+.tab-pane .dataTables_scrollBody, .accordion-body .dataTables_scrollBody { overflow-x: auto !important; }
+.tab-pane table.dataTable td, .tab-pane table.dataTable th { white-space: nowrap; }
+@media (max-width: 900px) { .ara-result-section > .ara-result-block { padding: .35rem; } }

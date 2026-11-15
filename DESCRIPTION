@@ -1,0 +1,39 @@
+Package: AdvancedResearchAnalytics
+Type: Package
+Title: Advanced Research Analytics Shiny Application
+Version: 1.1.3
+Authors@R: person("Muh. Asriadi", "AM", role = c("aut", "cre"), email = "maintainer@example.org")
+Description: An interactive statistical analysis application for multilevel
+    models, individual participant data meta-analysis, multivariate methods,
+    structural equation models, data management and diagnostic analyses.
+    The Shiny application and its original analysis modules are bundled
+    within the package and launched with run_app().
+License: file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.2.0)
+Imports:
+    shiny,
+    shinyjs,
+    bslib,
+    DT,
+    future,
+    promises,
+    data.table,
+    readxl,
+    haven,
+    lme4,
+    lmerTest,
+    performance,
+    parameters,
+    metafor,
+    lavaan,
+    semPlot,
+    MASS,
+    cluster,
+    openxlsx
+Suggests:
+    clubSandwich,
+    flextable,
+    officer,
+    rstudioapi
+NeedsCompilation: no

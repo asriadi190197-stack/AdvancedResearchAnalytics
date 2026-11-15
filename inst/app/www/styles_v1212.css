@@ -1,0 +1,45 @@
+/* v1.2.12 — all modules: preserve header/body alignment in Shiny DT outputs.
+   One real table, one overflow scroller; no duplicate scrollX header table. */
+.bslib-card, .card, .card-body, .tab-pane, .tab-content,
+.accordion, .accordion-item, .accordion-body,
+.ara-result-table-wrap, .ara-result-block, .ara-result-stack,
+.bslib-grid, .bslib-layout-columns { min-width: 0; max-width: 100%; }
+
+/* All Shiny DT output containers; native scrolling does NOT clone the header. */
+.shiny-datatable-output, .datatables, .ara-result-table-wrap,
+.hlm-sensitivity-table-scroll { min-width: 0; max-width: 100%; width: 100%; }
+.shiny-datatable-output .dataTables_wrapper,
+.ara-result-table-wrap .dataTables_wrapper,
+.hlm-sensitivity-table-scroll .dataTables_wrapper {
+  display: block; width: 100%; max-width: 100%; min-width: 0;
+  overflow-x: auto; overflow-y: hidden;
+  position: relative;
+}
+/* Keep the real header directly on top of the real body. */
+table.dataTable.ara-dt-stable {
+  width: 100% !important;
+  min-width: max-content;
+  border-collapse: collapse !important;
+  table-layout: auto !important;
+  margin: 0 !important;
+}
+table.dataTable.ara-dt-stable thead th,
+table.dataTable.ara-dt-stable tbody td,
+table.dataTable.ara-dt-stable tfoot th {
+  box-sizing: border-box;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-variant-numeric: tabular-nums;
+  padding: .55rem .65rem !important;
+}
+table.dataTable.ara-dt-stable thead th { text-align: left; }
+table.dataTable.ara-dt-stable tbody td { text-align: left; }
+/* Prevent clipped controls and empty-looking panels. */
+.shiny-datatable-output .dataTables_wrapper .dataTables_filter,
+.shiny-datatable-output .dataTables_wrapper .dataTables_length,
+.shiny-datatable-output .dataTables_wrapper .dataTables_info,
+.shiny-datatable-output .dataTables_wrapper .dataTables_paginate { max-width: 100%; }
+.accordion-body .shiny-datatable-output, .tab-pane .shiny-datatable-output { width: 100%; }
+/* Standard HTML tables (SEM, HLM and assumptions) use their existing native wrapper. */
+.ara-table-scroll { overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; }
+.ara-result-table { width: max-content !important; min-width: 100%; }
